@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Start
   - Interactable
+  - Flashlight
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Item
   - 
   - 
   - 
