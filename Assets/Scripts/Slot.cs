@@ -49,6 +49,11 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         return heldItem;
     }
 
+    public bool hasItem() 
+    { 
+        return heldItem ? true : false;
+    }
+
     public void updateData()
     {
         if (heldItem != null) 
