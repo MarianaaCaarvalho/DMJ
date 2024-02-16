@@ -14,6 +14,9 @@ public class MazeGenerator : MonoBehaviour
     private GameObject _enemy;
 
     [SerializeField]
+    private GameObject _battery;
+
+    [SerializeField]
     private int _mazeWidth;
 
     [SerializeField]
@@ -63,6 +66,11 @@ public class MazeGenerator : MonoBehaviour
             if (nextCell != null)
             {
                 GenerateMaze(currentCell, nextCell);
+                if (Random.value > 0.85f)
+                {
+                    //Instantiate(_battery, nextCell.transform.position, Quaternion.identity);
+                    Instantiate(_battery, new Vector3(nextCell.transform.position.x, 0.14f, nextCell.transform.position.z), Quaternion.identity);
+                }
             }
         } while (nextCell != null);
     }

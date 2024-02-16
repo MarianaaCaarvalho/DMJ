@@ -7,11 +7,12 @@ TagManager:
   - Start
   - Interactable
   - Flashlight
+  - Battery
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Item
