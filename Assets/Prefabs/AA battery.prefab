@@ -155,17 +155,5 @@ MonoBehaviour:
   equippableItemIndex: 0
   myEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1287267496353808397, guid: 22b9bbdeca6fce248a77630e61e20e48, type: 3}
-        m_TargetAssemblyTypeName: FlashLight, Assembly-CSharp
-        m_MethodName: AddEnergy
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   removeOneOnUse: 1

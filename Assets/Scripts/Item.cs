@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Item : MonoBehaviour
 {
-    public new string name = "New item";
-    public string description = "New description";
+    public new string name = "New Item";
+    public string description = "New Description";
     public Sprite icon;
     public int currentQuantity = 1;
     public int maxQuantity = 16;
@@ -17,16 +17,28 @@ public class Item : MonoBehaviour
     public UnityEvent myEvent;
     public bool removeOneOnUse;
 
-    public void UseItem() 
-    { 
-        if (myEvent.GetPersistentEventCount() > 0) 
-        { 
+    private void Start()
+    {
+        myEvent = ItemEventManager.Instance.GetItemEvents(this);
+    }
+
+    private void OnDisable()
+    {
+        if (!this.gameObject.scene.isLoaded)
+            return;
+
+        myEvent = ItemEventManager.Instance.GetItemEvents(this);
+    }
+
+    public void UseItem()
+    {
+        if (myEvent.GetPersistentEventCount() > 0)
+        {
             myEvent.Invoke();
 
             if (removeOneOnUse)
-            {
                 currentQuantity--;
-            }
         }
     }
 }
+
