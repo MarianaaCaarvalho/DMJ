@@ -882,6 +882,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152705849}
   m_CullTransparentMesh: 1
+--- !u!1 &205279014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 205279016}
+  - component: {fileID: 205279015}
+  m_Layer: 0
+  m_Name: Item Events Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &205279015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205279014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13768c829b55bf04e8eae4d281b26272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReferences:
+  - item: {fileID: 8860275185297242611, guid: 380e4e18a39e28d49924e38480c4af34, type: 3}
+    itemEvents:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1140743616}
+          m_TargetAssemblyTypeName: FlashLight, Assembly-CSharp
+          m_MethodName: AddEnergy
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 5
+            m_FloatArgument: 5.5
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!4 &205279016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205279014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 310.31207, y: 255.23398, z: -221.84279}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208150506
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,6 +5015,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1140743616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2397206196848997289, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+  m_PrefabInstance: {fileID: 1550578208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1142903836
 GameObject:
   m_ObjectHideFlags: 0
@@ -10354,3 +10420,4 @@ SceneRoots:
   - {fileID: 1157142440652268540}
   - {fileID: 1138115566}
   - {fileID: 1765967236}
+  - {fileID: 205279016}
