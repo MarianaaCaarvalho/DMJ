@@ -916,7 +916,7 @@ MonoBehaviour:
     itemEvents:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1140743616}
+        - m_Target: {fileID: 1140743617}
           m_TargetAssemblyTypeName: FlashLight, Assembly-CSharp
           m_MethodName: AddEnergy
           m_Mode: 3
@@ -5015,11 +5015,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1140743616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2397206196848997289, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+--- !u!114 &1140743617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3194824104151259552, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
   m_PrefabInstance: {fileID: 1550578208}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e1cf4cb534846438f847117be7bd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1142903836
 GameObject:
   m_ObjectHideFlags: 0
@@ -10328,15 +10334,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2052c94050460974aa1cc7668ac3e2e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.749
+      value: 0.162
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2052c94050460974aa1cc7668ac3e2e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.028
+      value: 0.152
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2052c94050460974aa1cc7668ac3e2e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.077
+      value: 0.969
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2052c94050460974aa1cc7668ac3e2e8, type: 3}
       propertyPath: m_LocalRotation.w
