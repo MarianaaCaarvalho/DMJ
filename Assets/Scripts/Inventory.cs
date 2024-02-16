@@ -47,7 +47,10 @@ public class Inventory : MonoBehaviour
         itemRaycast(Input.GetKeyDown(KeyCode.E));
 
         if (Input.GetKeyDown(KeyCode.I))
+        {
             toggleInventory(!inventory.activeInHierarchy);
+            Time.timeScale = 0.0f;
+        }  
 
         if (inventory.activeInHierarchy && Input.GetMouseButtonDown(0))
         {

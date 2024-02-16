@@ -14,13 +14,15 @@ public class MazeGenerator : MonoBehaviour
     private GameObject _enemy;
 
     [SerializeField]
+    private GameObject _battery;
+
+    [SerializeField]
     private int _mazeWidth;
 
     [SerializeField]
     private int _mazeDepth;
 
     private MazeCell[,] _mazeGrid;
-    private int start = 0;
 
     void Start()
     {
@@ -31,18 +33,15 @@ public class MazeGenerator : MonoBehaviour
             for (int z = 0; z < _mazeDepth; z++)
             {
                 _mazeGrid[x, z] = Instantiate(_mazeCellPrefab, new Vector3(x, 0, z), Quaternion.identity);
-                if (start == 0)
-                {
-                    _mazeGrid[0, 0].SetStartGround();
-                    start = 1;
-                }
+                _mazeGrid[0, 0].SetStartGround();
+
                 if ((x < 1) && z == _mazeDepth - 1)
                 {
                     Instantiate(_enemy, _mazeGrid[x, z].transform.position, Quaternion.identity);
                 }
-                if (x == _mazeWidth-1 && z == _mazeDepth-1)
+                if (x == _mazeWidth - 1 && z == _mazeDepth - 1)
                 {
-                    _mazeGrid[x,z].SetFinishGround();
+                    _mazeGrid[x, z].SetFinishGround();
                 }
             }
         }
@@ -63,6 +62,10 @@ public class MazeGenerator : MonoBehaviour
             if (nextCell != null)
             {
                 GenerateMaze(currentCell, nextCell);
+                if (Random.value > 0.85f)
+                {
+                    Instantiate(_battery, nextCell.transform.position, Quaternion.identity);
+                }
             }
         } while (nextCell != null);
     }

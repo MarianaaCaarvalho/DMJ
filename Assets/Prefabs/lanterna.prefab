@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7352911676107718098}
   - component: {fileID: 6976746441681521579}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3242971613477187980}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -160,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2052c94050460974aa1cc7668ac3e2e8, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2052c94050460974aa1cc7668ac3e2e8, type: 3}
       propertyPath: m_TagString
-      value: Flashlight
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -197,11 +197,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076044232704223748}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19e1cf4cb534846438f847117be7bd13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drainOverTime: 0
+  maxEnergy: 0
+  minEnergy: 0
+  drainRate: 0
+  lightSlider: {fileID: 0}
 --- !u!65 &8528385150809808339
 BoxCollider:
   m_ObjectHideFlags: 0

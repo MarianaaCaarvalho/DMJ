@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3537531762170928126}
   - component: {fileID: 8328075627709314878}
   - component: {fileID: 8860275185297242611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AA battery
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 1732791001494369766}
   serializedVersion: 2
   m_LocalRotation: {x: 0.50000006, y: 0.50000006, z: -0.49999997, w: -0.49999994}
-  m_LocalPosition: {x: -7.587749, y: 0.096, z: 25.277012}
-  m_LocalScale: {x: 10, y: 10, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,8 +130,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1287267496353808397, guid: 22b9bbdeca6fce248a77630e61e20e48, type: 3}
         m_TargetAssemblyTypeName: FlashLight, Assembly-CSharp
         m_MethodName: AddEnergy
         m_Mode: 3

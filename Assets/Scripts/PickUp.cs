@@ -13,7 +13,7 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.tag == "Flashlight")
         {
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.E))
             {
                 Destroy(other.gameObject);
                 flashlight.SetActive(true);
@@ -21,10 +21,4 @@ public class PickUp : MonoBehaviour
             }
         }
     }
-
-    //public void AddFlashlight()
-    //{
-    //    flashlight.SetActive(true);
-    //}
-
 }
