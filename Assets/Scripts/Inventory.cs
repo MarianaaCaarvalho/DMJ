@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
     [Header("Raycast")]
     public float raycastDistance = 5f;
     public LayerMask itemLayer;
-    public Transform dropLocation; // The location items will be dropped from.
+    public Transform dropLocation;
 
     [Header("Drag and Drop")]
     public Image dragIconImage;
@@ -57,12 +57,12 @@ public class Inventory : MonoBehaviour
         {
             dragInventoryIcon();
         }
-        else if (currentDragSlotIndex != -1 && Input.GetMouseButtonUp(0) || currentDragSlotIndex != -1 && !inventory.activeInHierarchy) // If we are hovered over a slot and release, if we are dragging an item and close the inventory
+        else if (currentDragSlotIndex != -1 && Input.GetMouseButtonUp(0) || currentDragSlotIndex != -1 && !inventory.activeInHierarchy)
         {
             dropInventoryIcon();
         }
 
-        if (Input.GetKeyDown(KeyCode.Q)) // The button we need to press to drop items from the inventory
+        if (Input.GetKeyDown(KeyCode.Q))
             dropItem();
 
         for (int i = 1; i < hotbarSlots.Count + 1; i++)
@@ -134,7 +134,7 @@ public class Inventory : MonoBehaviour
                     allInventorySlots[i].updateData();
                     return;
                 }
-                else // Add as much as we can to the current slot
+                else
                 {
                     heldItem.currentQuantity = heldItem.maxQuantity;
                     leftoverQuantity -= freeSpaceInSlot;
@@ -168,7 +168,7 @@ public class Inventory : MonoBehaviour
         Cursor.lockState = enable ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = enable;
 
-        // Disable the rotation of the camera.
+        
         Camera.main.GetComponent<FirstPersonLook>().sensitivity = enable ? 0 : 2;
     }
 
@@ -194,29 +194,29 @@ public class Inventory : MonoBehaviour
             Slot curSlot = allInventorySlots[i];
             if (curSlot.hovered && curSlot.hasItem())
             {
-                currentDragSlotIndex = i; // Update the current drag slot index variable.
+                currentDragSlotIndex = i;
 
-                currentDraggedItem = curSlot.GetItem(); // Get the item from the current slot
+                currentDraggedItem = curSlot.GetItem();
                 dragIconImage.sprite = currentDraggedItem.icon;
-                dragIconImage.color = new Color(1, 1, 1, 1); // Make the follow mouse icon opaque (visible).
+                dragIconImage.color = new Color(1, 1, 1, 1);
 
-                curSlot.SetItem(null); // Remove the item from the slot we just picked up the item from.
+                curSlot.SetItem(null);
             }
         }
     }
 
     private void dropInventoryIcon()
     {
-        // Reset our drag item variables
+        
         dragIconImage.sprite = null;
-        dragIconImage.color = new Color(1, 1, 1, 0); // Make invisible.
+        dragIconImage.color = new Color(1, 1, 1, 0);
 
         for (int i = 0; i < allInventorySlots.Count; i++)
         {
             Slot curSlot = allInventorySlots[i];
             if (curSlot.hovered)
             {
-                if (curSlot.hasItem()) // Swap the items.
+                if (curSlot.hasItem())
                 {
                     Item itemToSwap = curSlot.GetItem();
 
@@ -227,7 +227,7 @@ public class Inventory : MonoBehaviour
                     resetDragVariables();
                     return;
                 }
-                else // Place the item with no swap.
+                else
                 {
                     curSlot.SetItem(currentDraggedItem);
                     resetDragVariables();
@@ -236,7 +236,6 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        // If we get to this point we dropped the item in an invalid location (or closed the inventory).
         allInventorySlots[currentDragSlotIndex].SetItem(currentDraggedItem);
         resetDragVariables();
     }
