@@ -1625,8 +1625,8 @@ MonoBehaviour:
   _mazeCellPrefab: {fileID: 4044050588169744984, guid: c5b37deb144050648b6b23b87acb5123, type: 3}
   _enemy: {fileID: 4573458478010146557, guid: eb98cc9cc3eca81419b914d2f7547dba, type: 3}
   _battery: {fileID: 1732791001494369766, guid: 380e4e18a39e28d49924e38480c4af34, type: 3}
-  _mazeWidth: 20
-  _mazeDepth: 20
+  _mazeWidth: 5
+  _mazeDepth: 5
 --- !u!4 &419196826
 Transform:
   m_ObjectHideFlags: 0

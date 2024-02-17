@@ -30,6 +30,11 @@ public class EnemyAI : MonoBehaviour
 
         if (livesChanged)
         {
+            if (lives == 0)
+            {
+                SceneManager.LoadScene("DeadScene");
+            }
+
             animator.enabled = false;
             _enemy.speed = 0f;
             _timer += Time.deltaTime;
@@ -47,15 +52,8 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (lives == 0)
-            {
-                SceneManager.LoadScene("DeadScene");
-            }
-            else
-            {
-                lives -= 1;
-                livesChanged = true;
-            }
+            lives -= 1;
+            livesChanged = true;
         }
     }
 }
