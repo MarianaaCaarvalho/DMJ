@@ -45,13 +45,16 @@ public class Inventory : MonoBehaviour
     public void Update()
     {
         itemRaycast(Input.GetKeyDown(KeyCode.E));
-        Time.timeScale = 1.0f;
-
+        
         if (Input.GetKeyDown(KeyCode.I))
         {
             toggleInventory(!inventory.activeInHierarchy);
-            Time.timeScale = 0.0f;
-        }  
+        }
+
+        if (inventory.activeInHierarchy == false)
+        {
+            Time.timeScale = 1.0f;
+        }
 
         if (inventory.activeInHierarchy && Input.GetMouseButtonDown(0))
         {
@@ -164,7 +167,7 @@ public class Inventory : MonoBehaviour
     private void toggleInventory(bool enable)
     {
         inventory.SetActive(enable);
-
+        Time.timeScale = 0.0f;
         Cursor.lockState = enable ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = enable;
 
