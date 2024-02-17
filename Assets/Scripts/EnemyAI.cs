@@ -32,6 +32,8 @@ public class EnemyAI : MonoBehaviour
         {
             if (lives == 0)
             {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 SceneManager.LoadScene("DeadScene");
             }
 

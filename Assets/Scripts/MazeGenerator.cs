@@ -26,6 +26,8 @@ public class MazeGenerator : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         _mazeGrid = new MazeCell[_mazeWidth, _mazeDepth];
 
         for (int x = 0; x < _mazeWidth; x++)
