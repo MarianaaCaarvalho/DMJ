@@ -45,6 +45,7 @@ public class Inventory : MonoBehaviour
     public void Update()
     {
         itemRaycast(Input.GetKeyDown(KeyCode.E));
+        Time.timeScale = 1.0f;
 
         if (Input.GetKeyDown(KeyCode.I))
         {

@@ -64,7 +64,8 @@ public class MazeGenerator : MonoBehaviour
                 GenerateMaze(currentCell, nextCell);
                 if (Random.value > 0.85f)
                 {
-                    Instantiate(_battery, nextCell.transform.position, Quaternion.identity);
+                    //Instantiate(_battery, nextCell.transform.position, Quaternion.identity);
+                    Instantiate(_battery, new Vector3(nextCell.transform.position.x, 0.07f, nextCell.transform.position.z), Quaternion.identity);
                 }
             }
         } while (nextCell != null);
